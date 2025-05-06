@@ -85,9 +85,9 @@ class QuizService
         $percentage = $totalQuestions > 0 ? ($score / $totalQuestions) * 100 : 0;
     
         $message = match (true) {
-            $percentage < 40 => 'Beginner',
-            $percentage < 70 => 'Intermediate',
-            default => 'Expert',
+            $percentage < 40 => 'Padawan',
+            $percentage < 70 => 'Jedi',
+            default => 'Master',
         };
     
         return [

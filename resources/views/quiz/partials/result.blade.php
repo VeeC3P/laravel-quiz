@@ -26,6 +26,20 @@
     }
 
 </style>
+
+@php
+    $percentage = ($result['score'] / $result['total']) * 100;
+
+    if ($percentage > 80) {
+        $gif = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3poaWFrM2EzdGU4azNkY2x2NWZmbndyMWNtYml0YXV2eDBoZGlucSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o84sCIUu49AtNYkDK/giphy.gif';
+    } elseif ($percentage > 50) {
+        $gif = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JhdzZrdGxlYmhhNjBrN2V6b3B0NWZvM3dpMGhuZmxmbHhncjZicyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2JJLpA2wWNqJUwXC/giphy.gif';
+    } else {
+        $gif = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWRqenEyZ2tqZnQ1a2ZpbDhwOGJvcnNvNWthY3FzYnlza3h0YmJ2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ornk6UHtk276vLtkY/giphy.gif';
+    }
+
+@endphp
+
 <div class="text-center">
     <h1>Quiz Completed!</h1>
     <p class="lead mt-3">Your score: <strong>{{ $result['score'] }}/{{ $result['total'] }}</strong></p>
@@ -39,7 +53,9 @@
         </div>
     </div>
 
-    <p class="mt-4">{{ $result['message'] }}</p>
+    <img src="{{ $gif }}" alt="Score Result" style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" class="my-4" />
+
+    <p class="mt-4">Rank: {{ $result['message'] }}</p>
 
     <a href="{{ route('quiz.intro') }}" class="btn btn-outline-primary mt-4">Try Again</a>
 </div>

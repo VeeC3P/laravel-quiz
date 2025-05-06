@@ -40,7 +40,7 @@
             </div>
         @endforeach
 
-        <button type="submit" class="btn btn-success mt-4">Next</button>
+        <button type="submit" class="lightsaber-btn mt-4">Next</button>
     </form>
 </div>
 

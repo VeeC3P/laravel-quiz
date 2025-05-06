@@ -17,30 +17,93 @@ class QuizSeeder extends Seeder
         // Add more questions here for Bored Panda if they want to or for testing purposes on my local device
         $quizData = [
             [
-                'question' => 'What is the capital of France?',
+                'question' => 'Who is Luke Skywalker’s father?',
                 'answers' => [
-                    ['text' => 'Berlin', 'score' => 0],
-                    ['text' => 'Madrid', 'score' => 0],
-                    ['text' => 'Paris', 'score' => 1],
-                    ['text' => 'Rome', 'score' => 0],
+                    ['text' => 'Obi-Wan Kenobi', 'score' => 0],
+                    ['text' => 'Darth Vader', 'score' => 1],
+                    ['text' => 'Yoda', 'score' => 0],
+                    ['text' => 'Han Solo', 'score' => 0],
                 ],
             ],
             [
-                'question' => 'Which planet is known as the Red Planet?',
+                'question' => 'What is the name of Han Solo’s ship?',
                 'answers' => [
-                    ['text' => 'Earth', 'score' => 0],
-                    ['text' => 'Mars', 'score' => 1],
-                    ['text' => 'Jupiter', 'score' => 0],
-                    ['text' => 'Saturn', 'score' => 0],
+                    ['text' => 'Star Destroyer', 'score' => 0],
+                    ['text' => 'X-Wing', 'score' => 0],
+                    ['text' => 'Millennium Falcon', 'score' => 1],
+                    ['text' => 'TIE Fighter', 'score' => 0],
                 ],
             ],
             [
-                'question' => 'Who wrote "To Kill a Mockingbird"?',
+                'question' => 'Who trained Obi-Wan Kenobi?',
                 'answers' => [
-                    ['text' => 'Harper Lee', 'score' => 1],
-                    ['text' => 'Mark Twain', 'score' => 0],
-                    ['text' => 'Ernest Hemingway', 'score' => 0],
-                    ['text' => 'F. Scott Fitzgerald', 'score' => 0],
+                    ['text' => 'Yoda', 'score' => 0],
+                    ['text' => 'Mace Windu', 'score' => 0],
+                    ['text' => 'Qui-Gon Jinn', 'score' => 1],
+                    ['text' => 'Anakin Skywalker', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'What color is Mace Windu’s lightsaber?',
+                'answers' => [
+                    ['text' => 'Blue', 'score' => 0],
+                    ['text' => 'Green', 'score' => 0],
+                    ['text' => 'Purple', 'score' => 1],
+                    ['text' => 'Red', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'What species is Chewbacca?',
+                'answers' => [
+                    ['text' => 'Rodian', 'score' => 0],
+                    ['text' => 'Wookiee', 'score' => 1],
+                    ['text' => 'Hutt', 'score' => 0],
+                    ['text' => 'Ewok', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'What is the name of Boba Fett’s ship?',
+                'answers' => [
+                    ['text' => 'Slave I', 'score' => 1],
+                    ['text' => 'Razor Crest', 'score' => 0],
+                    ['text' => 'Ghost', 'score' => 0],
+                    ['text' => 'Interceptor', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'Who was the Supreme Leader of the First Order?',
+                'answers' => [
+                    ['text' => 'Kylo Ren', 'score' => 0],
+                    ['text' => 'Snoke', 'score' => 1],
+                    ['text' => 'Palpatine', 'score' => 0],
+                    ['text' => 'Hux', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'Which planet does Rey come from?',
+                'answers' => [
+                    ['text' => 'Naboo', 'score' => 0],
+                    ['text' => 'Jakku', 'score' => 1],
+                    ['text' => 'Tatooine', 'score' => 0],
+                    ['text' => 'Dagobah', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'Who said “It’s a trap!” in Return of the Jedi?',
+                'answers' => [
+                    ['text' => 'Admiral Ackbar', 'score' => 1],
+                    ['text' => 'Leia Organa', 'score' => 0],
+                    ['text' => 'Luke Skywalker', 'score' => 0],
+                    ['text' => 'Lando Calrissian', 'score' => 0],
+                ],
+            ],
+            [
+                'question' => 'What is the name of the Mandalorian’s adopted child?',
+                'answers' => [
+                    ['text' => 'Yaddle', 'score' => 0],
+                    ['text' => 'Grogu', 'score' => 1],
+                    ['text' => 'Dooku', 'score' => 0],
+                    ['text' => 'Ezra', 'score' => 0],
                 ],
             ],
         ];
