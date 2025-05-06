@@ -5,7 +5,7 @@ use App\Http\Controllers\QuizController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('quiz.intro');
 });
 
 // prototyping the paths, potentially will change it to make it more dynamic
