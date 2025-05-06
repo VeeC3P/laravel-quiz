@@ -1,18 +1,3 @@
-<style>
-    /* Initial state of the quiz container */
-    .quiz-container {
-        opacity: 0; /* Hidden initially */
-        transform: translateY(20px); /* Start slightly lower */
-        transition: opacity 1s ease, transform 1s ease; /* Smooth transition for fade-in and slide-up */
-    }
-
-    /* Animation when the page loads */
-    .quiz-container.fade-in {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Move to normal position */
-    }
-
-</style>
 @php
     $index = session('quiz_index', 0); // fallback to 0 if not set
     $currentQuestion = $question[$index];
@@ -31,14 +16,17 @@
     <form method="POST" action="{{ route('quiz.answer') }}">
         @csrf
 
-        @foreach ($currentQuestion['answers'] as $answerIndex => $answer)
-            <div class="form-check my-2">
-                <input class="form-check-input" type="radio" name="answer_index" id="answer{{ $answerIndex }}" value="{{ $answerIndex }}" required>
-                <label class="form-check-label" for="answer{{ $answerIndex }}">
-                    {{ $answer['text'] }}
-                </label>
-            </div>
-        @endforeach
+        <!-- Answers Grid -->
+        <div class="answers-grid">
+            @foreach ($currentQuestion['answers'] as $answerIndex => $answer)
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="answer_index" id="answer{{ $answerIndex }}" value="{{ $answerIndex }}" required>
+                    <label class="form-check-label" for="answer{{ $answerIndex }}">
+                        {{ $answer['text'] }}
+                    </label>
+                </div>
+            @endforeach
+        </div>
 
         <button type="submit" class="lightsaber-btn mt-4">Next</button>
     </form>
