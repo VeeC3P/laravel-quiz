@@ -47,21 +47,40 @@
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
+    
     window.addEventListener('load', () => {
         const duration = 2 * 1000;
         const end = Date.now() + duration;
 
+        const score = {{ $result['score'] }}; // Get the score from Laravel
+        const total = {{ $result['total'] }}; // Get the total from Laravel
+        const percentage = (score / total) * 100;
+
+        let particleCount = 10;  // Default particle count
+        let spread = 80;         // Default spread
+        let angle = 60;          // Default angle
+
+        // Adjust the confetti intensity based on the score percentage
+        if (percentage >= 50) {
+            // Stronger confetti for high scores
+            particleCount = 30;
+        } else if (percentage >= 80) {
+            // Moderate confetti for mid-range scores
+            particleCount = 60;
+        }
+
+        // Make a function and run it immediately on load event, immediately invoked function expression (IIFE)
         (function frame() {
             confetti({
-                particleCount: 5,
-                angle: 60,
-                spread: 55,
+                particleCount: particleCount,
+                angle: angle,
+                spread: spread,
                 origin: { x: 0 }
             });
             confetti({
-                particleCount: 5,
+                particleCount: particleCount,
                 angle: 120,
-                spread: 55,
+                spread: spread,
                 origin: { x: 1 }
             });
 
@@ -70,4 +89,5 @@
             }
         })();
     });
+
 </script>
