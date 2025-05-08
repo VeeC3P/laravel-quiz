@@ -26,7 +26,7 @@ class QuizService
     }
 
     // Lets set up the sessions when starting the quiz so that we could access questions and score when needed
-    public function start()
+    public function start(): void
     {
         $this->reset();
         Session::put('quiz_index', 0);
