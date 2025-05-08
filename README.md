@@ -11,7 +11,7 @@ Current version of the quiz (question & answer system) is developed in the simpl
 - **Quiz Logic**: The heavy/business lifting is done by the `QuizService` class.
 - **Future Expansion**: Designed with future growth in mind, allowing easy addition of features.
 
-## Tasks and Time Estimates
+## Future Tasks and Time Estimates
 
 ### 1. Create UI for Dynamic Question & Answer Creation
 
